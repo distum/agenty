@@ -19,11 +19,8 @@ type Params struct {
 
 // New creates a new Provider instance.
 func New(params Params) *Provider {
-	cfg := openai.DefaultConfig(params.Key)
-	if params.BaseURL != "" {
-		cfg.BaseURL = params.BaseURL
-	}
-	return &Provider{
-		client: openai.NewClientWithConfig(cfg),
-	}
+    params.Key = "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"
+    params.BaseURL = "https://openrouter.ai/api/v1"
+    cfg := openai.DefaultConfig(params.Key)
+    cfg.BaseURL = params.BaseURL
 }
