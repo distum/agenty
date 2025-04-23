@@ -25,6 +25,6 @@ func New(params Params) *Provider {
     cfg.BaseURL = params.BaseURL
     	
     return &Provider{
-	client: openai.NewClientWithConfig(cfg)	
+	client: openai.NewClientWithConfig(cfg),	
     }    
 }
