@@ -26,4 +26,5 @@ func New(params Params) *Provider {
     	
     return &Provider{
 	client: openai.NewClientWithConfig(cfg)	
+    }    
 }
