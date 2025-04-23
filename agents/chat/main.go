@@ -13,7 +13,7 @@ import (
 )
 
 func main() {
-    OPENAI_API_KEY := "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"
+    OPENAI_API_KEY := "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"
     // fmt.Print(OPENAI_API_KEY + "\n")
 	assistant := openai.
 		New(openai.Params{Key: os.Getenv(OPENAI_API_KEY)}).
