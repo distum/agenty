@@ -23,4 +23,7 @@ func New(params Params) *Provider {
     params.BaseURL = "https://openrouter.ai/api/v1"
     cfg := openai.DefaultConfig(params.Key)
     cfg.BaseURL = params.BaseURL
+    	
+    return &Provider{
+	client: openai.NewClientWithConfig(cfg)	
 }
